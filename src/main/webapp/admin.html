@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>系统管理 | 照片储存管理系统</title>
+<!--        <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.js"></script>-->
+        <script src="js_md5.js"></script>
+        <script src="base.js"></script>
+        <style>@import "base.css";</style>
+        <style>
+            h2 {
+                width: 80%;
+                margin: 0 auto;
+                color: darkslategrey;
+                text-align: center;
+                line-height: 100px;
+                font-size: 24px;
+            }
+
+            h5 {
+                width: 80%;
+                margin: 0 auto;
+                color: black;
+                text-align: center;
+            }
+
+            #f {
+                cursor: default;
+                background-color: navajowhite;
+            }
+
+            .table2 {
+                width: 420px;
+                height: 150px;
+                padding: 20px;
+            }
+
+            .table2 td {
+                line-height: 40px;
+            }
+
+            .td-left {
+                text-align: right;
+                width: 80px;
+                font-weight: bold;
+                color: dimgrey;
+            }
+
+            .td-right {
+                text-align: left;
+                width: 260px;
+                padding-left: 30px;
+            }
+
+            .td-middle {
+                text-align: center;
+            }
+
+            .submit {
+                width: 50px;
+                cursor: pointer;
+            }
+
+            #error1, #error2, #error3{
+                text-align: right;
+                font-size: 12px;
+                color: red;
+                font-weight: normal;
+            }
+
+            #username, #account, #password {
+                width: 150px;
+                margin-right: 15px;
+                border: gray solid 2px;
+                border-radius: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <hr color="grey" width="80%" size="2">
+        <p id="name"></p>
+        <h1>照片存储管理系统</h1>
+        <hr color="grey" width="80%" size="2">
+        <div>
+            <table align="center" class="table1">
+                <tr>
+                    <td id="a" onclick="location.href='index.html'"><span>首页</span></td>
+                    <td id="b" onclick="location.href='my'"><span>我的</span></td>
+                    <td id="c" onclick="location.href='update.html'"><span>修改密码</span></td>
+                    <td id="d" onclick="location.href='login.html'"><span>切换账户</span></td>
+                    <td id="e" onclick="delCookie('username');location.href='logout'"><span>退出账户</span></td>
+                    <td id="f" onclick="location.href='admin.html'"><span>系统管理</span></td>
+                    <td id="g" onclick="location.href='login.html'"><span>登陆/注册</span></td>
+                </tr>
+            </table>
+        </div>
+        <hr color="grey" width="80%" size="2">
+        <h2>系统管理 | 删除用户及其文件</h2>
+        <h5>该功能仅系统管理员使用，请验证管理员账户及密码！</h5>
+        <div>
+            <form action="admin" method="post" id="admin">
+                <table class="table2" align="center">
+                    <tr>
+                        <td class="td-left">删除用户名</td>
+                        <td class="td-right"><input type="text" id="username" name="username"
+                                                    onblur="checkUsername()" placeholder="请输入删除的用户名"><span
+                                id="error1"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">管理员账户</td>
+                        <td class="td-right"><input type="text" id="account" name="admin"
+                                                    onblur="checkAccount()" placeholder="请输入管理员用户名"><span
+                                id="error2"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="td-left">管理员密码</td>
+                        <td class="td-right"><input type="password" id="password" name="password"
+                                                    onblur="checkPassword()" placeholder="请输入管理员密码"><span
+                                id="error3"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="td-middle" colspan="2"><input type="submit" value="提交" class="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <script>
+            document.getElementById("admin").onsubmit = function () {
+                var password = document.getElementById("password");
+                var flag = checkUsername() && checkAccount() && checkPassword();
+                if (flag) {
+                    password.value = md5(password.value);
+                }
+                return flag;
+            }
+
+            function checkUsername() {
+                var username = document.getElementById("username");
+                var error1 = document.getElementById("error1");
+                if (username.value === "") {
+                    error1.innerHTML = "用户名不得为空";
+                    return false;
+                } else {
+                    error1.innerHTML = "";
+                    return true;
+                }
+            }
+
+            function checkAccount() {
+                var account = document.getElementById("account");
+                var error1 = document.getElementById("error2");
+                if (account.value === "") {
+                    error1.innerHTML = "账户不得为空";
+                    return false;
+                } else {
+                    error1.innerHTML = "";
+                    return true;
+                }
+            }
+
+            function checkPassword() {
+                var password = document.getElementById("password");
+                var error2 = document.getElementById("error3");
+                if (password.value === "") {
+                    error2.innerHTML = "密码不得为空";
+                    return false;
+                } else {
+                    error2.innerHTML = "";
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

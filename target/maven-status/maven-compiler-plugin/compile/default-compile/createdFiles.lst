@@ -1,0 +1,16 @@
+com\star\utils\JDBCUtils.class
+com\star\servlet\Upload.class
+com\star\servlet\Logout.class
+com\star\servlet\Demo1Servlet.class
+com\star\servlet\Preview.class
+com\star\dao\HDFSDao.class
+com\star\domain\User.class
+com\star\utils\DownloadUtils.class
+com\star\domain\Data.class
+com\star\servlet\Regist.class
+com\star\servlet\Format.class
+com\star\servlet\My.class
+com\star\dao\UserDao.class
+com\star\servlet\Login.class
+com\star\servlet\Update.class
+com\star\servlet\Delete.class

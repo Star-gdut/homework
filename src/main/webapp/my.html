@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>我的 | 照片储存管理系统</title>
+        <script src="base.js"></script>
+        <style>@import "base.css";</style>
+        <style>
+            h2 {
+                width: 80%;
+                margin: 0 auto;
+                color: darkslategrey;
+                text-align: center;
+                line-height: 100px;
+                font-size: 24px;
+            }
+
+            #b {
+                cursor: default;
+                background-color: navajowhite;
+            }
+
+            div {
+                text-align: center;
+            }
+
+            a:link {
+                color: brown;
+            }
+
+            a:visited {
+                color: brown;
+            }
+
+            a:hover {
+                color: red;
+            }
+
+            input {
+                width: 80px;
+                cursor: pointer;
+            }
+
+            .my td {
+                height: 60px;
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <hr color="grey" width="80%" size="2">
+        <p id="name"></p>
+        <h1>照片存储管理系统</h1>
+        <hr color="grey" width="80%" size="2">
+        <div>
+            <table align="center" class="table1">
+                <tr>
+                    <td id="a" onclick="location.href='index.html'"><span>首页</span></td>
+                    <td id="b" onclick="location.href='my'"><span>我的</span></td>
+                    <td id="c" onclick="location.href='update.html'"><span>修改密码</span></td>
+                    <td id="d" onclick="location.href='login.html'"><span>切换账户</span></td>
+                    <td id="e" onclick="delCookie('username');location.href='logout'"><span>退出账户</span></td>
+                    <td id="f" onclick="location.href='admin.html'"><span>系统管理</span></td>
+                    <td id="g" onclick="location.href='login.html'"><span>登陆/注册</span></td>
+                </tr>
+            </table>
+        </div>
+        <hr color="grey" width="80%" size="2">
+        <h2>我的</h2>
+        <div>
+            <table class="my" align="center">
+                <tr>
+                    <td><input type="button" onclick="location.href='upload.html'" value="上传照片"/></td>
+                    <td><input type="button" onclick="location.href='download'" value="管理照片"/></td>
+                    <td><input type="button" onclick="location.href='format.html'" value="清空照片"/></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [21/May/2021:13:56:13 +0800] "GET /homework/login.html HTTP/1.1" 304 - http-bio-8080-exec-1 78
+0:0:0:0:0:0:0:1 - - [21/May/2021:13:56:14 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-2 0

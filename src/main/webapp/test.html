@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>管理照片 | 照片储存管理系统</title>
+        <script src="base.js"></script>
+        <style>@import "base.css";</style>
+        <style>
+            #b {
+                cursor: default;
+                background-color: navajowhite;
+            }
+            h2 {
+                width: 80%;
+                margin: 0 auto;
+                color: darkslategrey;
+                text-align: center;
+                line-height: 100px;
+                font-size: 24px;
+            }
+            .table2 {
+                width: 800px;
+                padding: 20px;
+            }
+
+            .ss{
+                height: 30px;
+            }
+            .s{
+                height: 40px;
+            }
+
+            .td-left {
+                text-align: right;
+                padding-right: 30px;
+                width: 80px;
+            }
+            .td-lr{
+                text-align: left;
+                padding-left: 30px;
+                width: 150px;
+            }
+
+            .td-right {
+                text-align: left;
+                padding-left: 30px;
+                width: 80px;
+            }
+            .td-rl{
+                text-align: left;
+                padding-left: 30px;
+                width: 80px;
+            }
+
+            .td-middle {
+                width: 150px;
+                text-align: center;
+            }
+
+            a:link {
+                color: brown;
+            }
+
+            a:visited {
+                color: darkblue;
+            }
+
+            a:hover {
+                color: red;
+            }
+
+            th[class=td-lr]{
+                text-align: left;
+                padding-left: 60px;
+                width: 150px;
+            }
+
+            th[class=td-right]{
+                text-align: left;
+                padding-left: 20px;
+                width: 160px;
+            }
+        </style>
+    </head>
+    <body>
+        <hr color="grey" width="80%" size="2">
+        <p id="name"></p>
+        <h1>照片存储管理系统</h1>
+        <hr color="grey" width="80%" size="2">
+        <div>
+            <table align="center" class="table1">
+                <tr>
+                    <td id="a" onclick="location.href='index.html'"><span>首页</span></td>
+                    <td id="b" onclick="location.href='my'"><span>我的</span></td>
+                    <td id="c" onclick="location.href='update.html'"><span>修改密码</span></td>
+                    <td id="d" onclick="location.href='login.html'"><span>切换账户</span></td>
+                    <td id="e" onclick="delCookie('username');location.href='logout'"><span>退出账户</span></td>
+                    <td id="f" onclick="location.href='admin.html'"><span>系统管理</span></td>
+                    <td id="g" onclick="location.href='login.html'"><span>登陆/注册</span></td>
+                </tr>
+            </table>
+        </div>
+        <hr color="grey" width="80%" size="2">
+        <h2>我的 | 管理照片</h2>
+        <div>
+            <table align="center" class="table2">
+                <tr>
+                    <th width="80"></th>
+                    <th class="td-lr"><b>文件名称</b></th>
+                    <th class="td-middle"><b>上传日期</b></th>
+                    <th colspan="2" class="td-right"><b>文件大小</b></th>
+                </tr>
+                <tr class="ss"><td colspan="5"><hr color="black"></td></tr>
+                <tr class="s">
+                    <td class="td-left"><input type="button" onclick="location.href='preview?type=download&filename=filename'" value="下载"></td>
+                    <td class="td-lr"><a href="preview?type=preview&filename=filename">" + 很长很长很长的文件名唉 你还能看得见吗 +如果再长一点呢？ "</a></td>
+                    <td class="td-middle">date</td>
+                    <td class="td-rl">size+"MB"</td>
+                    <td class="td-right"><input type="button" onclick="if(confirm('你确定要删除 + filename + 吗？')){location.href='delete?filename=filename'}" value="删除"></td>
+                </tr>
+                <tr class="s">
+                    <td class="td-left"><input type="button" value="下载"></td>
+                    <td class="td-lr"><a href="">name</a></td>
+                    <td class="td-middle">date</td>
+                    <td class="td-rl">size</td>
+                    <td class="td-right"><input type="button" value="删除"></td>
+                </tr>
+                <tr class="s">
+                    <td class="td-left"><input type="button" value="下载"></td>
+                    <td class="td-lr"><a href="">name</a></td>
+                    <td class="td-middle">date</td>
+                    <td class="td-rl">size</td>
+                    <td class="td-right"><input type="button" value="删除"></td>
+                </tr>
+                <tr class="s">
+                    <td class="td-left"><input type="button" value="下载"></td>
+                    <td class="td-lr"><a href="">name</a></td>
+                    <td class="td-middle">date</td>
+                    <td class="td-rl">size</td>
+                    <td class="td-right"><input type="button" value="删除"></td>
+                </tr>
+                <tr class="s">
+                    <td class="td-left"><input type="button" value="下载"></td>
+                    <td class="td-lr"><a href="">name</a></td>
+                    <td class="td-middle">date</td>
+                    <td class="td-rl">size</td>
+                    <td class="td-right"><input type="button" value="删除"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

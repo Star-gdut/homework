@@ -1,0 +1,42 @@
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    width: 80%;
+    margin: 0 auto;
+    color: darkslategrey;
+    text-align: center;
+    height: 75px;
+    font-size: 38px;
+}
+
+.table1 {
+    border: lightgrey solid 1px;
+    width: 800px;
+}
+
+.table1 td {
+    height: 20px;
+    width: 50px;
+    text-align: center;
+    border: lightgrey solid 1px;
+    background-color: cornsilk;
+    cursor: pointer;
+}
+
+
+span {
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+
+p {
+    margin: 0 auto;
+    text-align: right;
+    height: 20px;
+    width: 80%;
+    font-size: 14px;
+    color: lightsteelblue;
+}

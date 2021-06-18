@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>照片存储管理系统</title>
+        <script src="base.js"></script>
+        <style>@import "base.css";</style>
+        <style>
+            #a {
+                cursor: default;
+                background-color: navajowhite;
+            }
+        </style>
+    </head>
+    <body>
+        <hr color="grey" width="80%" size="2">
+        <p id="name"></p>
+        <h1>照片存储管理系统</h1>
+        <hr color="grey" width="80%" size="2">
+        <div>
+            <table align="center" class="table1">
+                <tr>
+                    <td id="a" onclick="location.href='index.html'"><span>首页</span></td>
+                    <td id="b" onclick="location.href='my'"><span>我的</span></td>
+                    <td id="c" onclick="location.href='update.html'"><span>修改密码</span></td>
+                    <td id="d" onclick="location.href='login.html'"><span>切换账户</span></td>
+                    <td id="e" onclick="delCookie('username');location.href='logout'"><span>退出账户</span></td>
+                    <td id="f" onclick="location.href='admin.html'"><span>系统管理</span></td>
+                    <td id="g" onclick="location.href='login.html'"><span>登陆/注册</span></td>
+                </tr>
+            </table>
+        </div>
+        <hr color="grey" width="80%" size="2">
+    </body>
+</html>
